@@ -1,0 +1,55 @@
+
+
+
+set tabstop=4     " a tab is four spaces
+set incsearch
+set hlsearch
+
+"show whitespace
+"set list
+
+"Find Text in workspace: Alt+W
+eclipseuiaction find-text-in-workspace org.eclipse.search.ui.performTextSearchWorkspace
+nnoremap ,w :find-text-in-workspace<cr>
+
+"Find Text in File: Alt+E
+eclipseuiaction find-text-in-file org.eclipse.search.ui.performTextSearchFile
+nnoremap ,e :find-text-in-file<cr>
+
+"File Search - Alt+G
+eclipseuiaction file-search org.eclipse.search.ui.openFileSearchPage
+nnoremap ,g :file-search<cr>
+
+"Open Resource - Alt+Q
+eclipseuiaction open-resource org.eclipse.ui.navigate.openResource
+nnoremap ,q :open-resource<cr>
+
+"Open Element - Alt+H
+eclipseuiaction open-element org.eclipse.cdt.ui.navigate.opentype
+nnoremap ,h :open-element<cr> 
+
+"Open Declaration - Alt+D
+eclipseuiaction open-declaration org.eclipse.cdt.ui.edit.opendecl
+nnoremap ,d :open-declaration<cr> 
+
+"References - Alt+R
+eclipseuiaction find-references org.eclipse.cdt.ui.search.findrefs
+nnoremap ,r :find-references<cr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
