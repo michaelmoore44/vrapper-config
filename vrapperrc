@@ -8,33 +8,49 @@ set hlsearch
 "show whitespace
 "set list
 
+inoremap ;; <Esc>`^
+vnoremap ;; <Esc>gV
+
+nnoremap L $
+nnoremap H ^ 
+vnoremap L $
+vnoremap H ^ 
+
+"Jump back
+eclipseuiaction Jump-back org.eclipse.ui.navigate.backwardHistory
+nnoremap <Tab> :Jump-back<cr>
+
+"Jump to last edit 
+eclipseuiaction Jump-to-last-edit org.eclipse.ui.edit.text.gotoLastEditPosition
+nnoremap <Space><Tab> :Jump-to-last-edit<cr>
+
 "Find Text in workspace: Alt+W
 eclipseuiaction find-text-in-workspace org.eclipse.search.ui.performTextSearchWorkspace
-nnoremap ,w :find-text-in-workspace<cr>
+nnoremap <Space>w :find-text-in-workspace<cr>
 
 "Find Text in File: Alt+E
 eclipseuiaction find-text-in-file org.eclipse.search.ui.performTextSearchFile
-nnoremap ,e :find-text-in-file<cr>
+nnoremap <Space>e :find-text-in-file<cr>
 
 "File Search - Alt+G
 eclipseuiaction file-search org.eclipse.search.ui.openFileSearchPage
-nnoremap ,g :file-search<cr>
+nnoremap <Space>g :file-search<cr>
 
 "Open Resource - Alt+Q
 eclipseuiaction open-resource org.eclipse.ui.navigate.openResource
-nnoremap ,q :open-resource<cr>
+nnoremap <Space>q :open-resource<cr>
 
 "Open Element - Alt+H
 eclipseuiaction open-element org.eclipse.cdt.ui.navigate.opentype
-nnoremap ,h :open-element<cr> 
+nnoremap <Space>h :open-element<cr> 
 
 "Open Declaration - Alt+D
 eclipseuiaction open-declaration org.eclipse.cdt.ui.edit.opendecl
-nnoremap ,d :open-declaration<cr> 
+nnoremap <Space>d :open-declaration<cr> 
 
 "References - Alt+R
 eclipseuiaction find-references org.eclipse.cdt.ui.search.findrefs
-nnoremap ,r :find-references<cr>
+nnoremap <Space>r :find-references<cr>
 
 
 
