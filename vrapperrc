@@ -1,14 +1,16 @@
 
 
 
+set softtabstop=4     " a tab is four spaces
 set tabstop=4     " a tab is four spaces
 set incsearch
-set hlsearch
+"set hlsearch
 
 "show whitespace
 "set list
 
-inoremap ;; <Esc>`^
+inoremap jk <Esc>`^
+inoremap kj <Esc>`^
 vnoremap ;; <Esc>gV
 
 nnoremap L $
@@ -19,6 +21,10 @@ vnoremap H ^
 "Jump back
 eclipseuiaction Jump-back org.eclipse.ui.navigate.backwardHistory
 nnoremap <Tab> :Jump-back<cr>
+
+"Jump forward
+eclipseuiaction  Jump-forward org.eclipse.ui.navigate.forwardHistory
+nnoremap ,<Tab> :Jump-forward<cr>
 
 "Jump to last edit 
 eclipseuiaction Jump-to-last-edit org.eclipse.ui.edit.text.gotoLastEditPosition
