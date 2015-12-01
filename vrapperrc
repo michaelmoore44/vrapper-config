@@ -1,10 +1,17 @@
 
 set filetype=vim
 
-set softtabstop=4     " a tab is four spaces
 set tabstop=4     " a tab is four spaces
+set shiftwidth=4  " number of spaces to use for autoindenting
+set softtabstop=4 " spaces per tab
+set expandtab     " insert space characters when tab is pressed
+
+
 set incsearch
 set hlsearch
+set ignorecase
+set smartcase
+set startnormalmode    "always starts in normal mode when switching tabs
 
 "show whitespace
 "set list
@@ -16,9 +23,12 @@ vnoremap ;; <Esc>gV
 nnoremap L $
 nnoremap H ^ 
 vnoremap L $
-vnoremap H ^ 
+vnoremap H ^
 
-nnoremap <CR> :nohlsearch<CR>
+vnoremap < <gv
+vnoremap > >gv 
+
+nnoremap <Space><CR> :nohlsearch<CR>
 
 "Jump back
 eclipseuiaction Jump-back org.eclipse.ui.navigate.backwardHistory
